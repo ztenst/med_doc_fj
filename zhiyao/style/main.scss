@@ -31,10 +31,11 @@ a{
     position:relative;
 }
 .sidebar{
-    position:absolute;
+    position:fixed;
     bottom:0;
     top:0;
     left:0;
+    z-index:99;
     .sidebar-min{
         position:absolute;
         top:0;
@@ -108,6 +109,9 @@ a{
         }
         .inner{
             padding:0 30px;
+            height:100%;
+            overflow-y:auto;
+            height:100%;
         }
         .title{
             position:relative;
@@ -487,6 +491,8 @@ body{
 @media screen and (min-width:1900px){
     body{
         .sidebar{
+            position:absolute;
+            z-index:0;
             .sidebar-min{
                 display:none;
             }
