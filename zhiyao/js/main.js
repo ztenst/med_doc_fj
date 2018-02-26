@@ -41,4 +41,16 @@ jQuery(document).ready(function($) {
             $(this).selectmenu('option','width',ws[i]);
         })
      }
+     
+     (function() {
+         var cache_td_ws = [];
+         //thead tbody
+         $('.chart-table .table-tbody').find('tr:first td').each(function() {
+             var w = $(this).width();
+             cache_td_ws.push(w);
+         })
+         $('.chart-table .table-thead').find('th').each(function(i,v) {
+             $(this).width(cache_td_ws[i]);
+         });
+     })();
 });

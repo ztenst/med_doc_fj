@@ -321,6 +321,12 @@ body{
     }
     .chart-table{
         margin-top:30px;
+        position:relative;
+        padding-right:100px;
+        .table-tbody{
+            height:255px;
+            overflow-y:auto;
+        }
         table{
             .down{
                 display:inline-block;
@@ -355,6 +361,12 @@ body{
                 border:1px solid #f4f4f4;
                 height:50px;
             }
+        }
+        .chart-table-opts{
+            position:absolute;
+            top:0;
+            right:0;
+            width:100px;
         }
     }
     .news{
