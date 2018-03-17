@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="./style/main.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="./js/jquery-ui-1.12.1.custom/jquery-ui.min.css" media="all" />
+</head>
+<body>
+    <div class="frame">
+        <div class="sidebar">
+            <div class="sidebar-min">
+                <div class="opts">
+                    <ul>
+                      <li class="o1 on"><a href=""><span>药物</span></a></li>
+                      <li class="o2"><a href=""><span>疾病</span></a></li>
+                      <li class="o3"><a href=""><span>标志物</span></a></li>
+                      <li class="o4"><a href=""><span>更多</span></a></li>
+                    </ul>
+                </div>
+                <div class="more"></div>
+            </div>
+            <div class="sidebar-extend dn">
+                <div class="inner">
+                    <div class="filter">
+                        <div class="filter-item">
+                            <div class="title"><span class="zh">药物</span><span class="en">Medicine</span></div>
+                            <div class="filter-select-list">
+                                <div class="filter-select-item l1">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select"><option value="" disabled selected>请选择药物1</option><option value="">1</option><option value="">2</option></select></div>
+                                </div>
+                                <div class="filter-select-item l2 dn">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select"><option value="" disabled selected>请选择药物2</option><option value="">1</option><option value="">2</option></select></div>
+                                    <div class="del"></div>
+                                </div>
+                                <div class="filter-select-item l2 dn">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select"><option value="" disabled selected>请选择药物3</option><option value="">1</option><option value="">2</option></select></div>
+                                    <div class="del"></div>
+                                </div>
+                                <div class="filter-select-item l2 dn">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select"><option value="" disabled selected>请选择药物4</option><option value="">1</option><option value="">2</option></select></div>
+                                    <div class="del"></div>
+                                </div>
+                                <div class="filter-select-item l2 dn">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select"><option value="" disabled selected>请选择药物5</option><option value="">1</option><option value="">2</option></select></div>
+                                    <div class="del"></div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="filter-item">
+                            <div class="title"><span class="zh">疾病</span><span class="en">Disease</span></div>
+                            <div class="filter-select-list">
+                                <div class="filter-select-item l1">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select" data-w="270"><option value="" disabled selected>请选择药物</option><option value="">1</option><option value="">2</option></select></div>
+                                </div>
+                                <div class="filter-select-item l2">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select" data-w="240"><option value="" disabled selected>请选择药物</option><option value="">1</option><option value="">2</option></select></div>
+                                    <div class="del"></div>
+                                </div>
+                                <div class="filter-select-item l2">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select" data-w="220"><option value="" disabled selected>请选择药物</option><option value="">1</option><option value="">2</option></select></div>
+                                    <div class="del"></div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="filter-item">
+                            <div class="title"><span class="zh">标志物</span><span class="en">Biomarker</span></div>
+                            <div class="filter-select-list">
+                                <div class="filter-select-item l1">
+                                    <div class="add"></div>
+                                    <div class="select"><select name="" class="j-select" data-w="270"><option value="" disabled selected>请选择药物</option><option value="">1</option><option value="">2</option></select></div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="filter-item">
+                            <div class="title"><span class="zh">更多检索选项</span><span class="en">More</span></div>
+                            <div class="filter-item-more">
+                                <div class="ele person">
+                                    <label for="">作<em class="em2"></em>者</label>
+                                    <input type="text" name="" class="text"/>
+                                </div>
+                                <div class="ele comp">
+                                    <label for="">机<em class="em2"></em>构</label>
+                                    <input type="text" name="" class="text"/>
+                                </div>
+                                <div class="ele factor">
+                                    <label for="">影响因子</label>
+                                    <input type="text" name="" class="text"/>
+                                </div>
+                               <div class="ele year">
+                                    <label for="">年<em class="em2"></em>份</label>
+                                    <div class="range">
+                                        <input type="text" name="" class="text"/>
+                                        <span>~</span>
+                                        <input type="text" name="" class="text"/>
+                                    </div>
+                                </div>
+                                <div class="ele btn">
+                                    <label for="" class="vn">按<em class="em2"></em>扭</label>
+                                    <input type="button" value="确定" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ads">
+                        <div class="ads-item">
+                            <img src="./images/ad2.png" alt="" />
+                        </div>
+                        <div class="ads-item">
+                            <img src="./images/ad2.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="inner">
+                <div class="search">
+                    <input type="text" name="" placeholder="Type in to Search..."/>
+                </div>
+                <div class="login">
+                    <a href=""><span>Log in</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="ad1">
+            <img src="./images/ad1.png" alt="" />
+        </div>
+        <div class="main">
+            <div class="main-block">
+                <div class="chart">
+                    <img src="./images/chart.png" alt="" class="demo-img" />
+                </div>
+                <div class="chart-table">
+                    <div class="table-thead">
+                        <table>
+                            <thead>
+                              <th>No.</th>
+                              <th>Article Kinds</th>
+                              <th>IF</th>
+                              <th>Journal Simple</th>
+                              <th>Year</th>
+                              <th>Study Object</th>
+                              <th>Patient</th>
+                              <th>Primary Protocol</th>
+                              <th>Title</th>
+                              <th>Abstract（原文）</th>
+                              <th>Abstract（简要）</th>
+                              <th class="checkbox"><input type="checkbox" name="" /></th>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-tbody">
+                        <table>
+                            <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Review</td>
+                                  <td>45</td>
+                                  <td>N Eng J</td>
+                                  <td>2016</td>
+                                  <td>HCC</td>
+                                  <td>1420</td>
+                                  <td>T-TACE</td>
+                                  <td>Thalidomide……</td>
+                                  <td>.……</td>
+                                  <td>.……</td>
+                                  <td class="checkbox"><input checked type="checkbox" name="" /></td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Review</td>
+                                  <td>45</td>
+                                  <td>N Eng J</td>
+                                  <td>2016</td>
+                                  <td>HCC</td>
+                                  <td>1420</td>
+                                  <td>T-TACE</td>
+                                  <td>Thalidomide……</td>
+                                  <td>.……</td>
+                                  <td>.……</td>
+                                  <td class="checkbox"><input checked type="checkbox" name="" /></td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Review</td>
+                                  <td>45</td>
+                                  <td>N Eng J</td>
+                                  <td>2016</td>
+                                  <td>HCC</td>
+                                  <td>1420</td>
+                                  <td>T-TACE</td>
+                                  <td>Thalidomide……</td>
+                                  <td>.……</td>
+                                  <td>.……</td>
+                                  <td class="checkbox"><input checked type="checkbox" name="" /></td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Review</td>
+                                  <td>45</td>
+                                  <td>N Eng J</td>
+                                  <td>2016</td>
+                                  <td>HCC</td>
+                                  <td>1420</td>
+                                  <td>T-TACE</td>
+                                  <td>Thalidomide……</td>
+                                  <td>.……</td>
+                                  <td>.……</td>
+                                  <td class="checkbox"><input checked type="checkbox" name="" /></td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Review</td>
+                                  <td>45</td>
+                                  <td>N Eng J</td>
+                                  <td>2016</td>
+                                  <td>HCC</td>
+                                  <td>1420</td>
+                                  <td>T-TACE</td>
+                                  <td>Thalidomide……</td>
+                                  <td>.……</td>
+                                  <td>.……</td>
+                                  <td class="checkbox"><input checked type="checkbox" name="" /></td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Review</td>
+                                  <td>45</td>
+                                  <td>N Eng J</td>
+                                  <td>2016</td>
+                                  <td>HCC</td>
+                                  <td>1420</td>
+                                  <td>T-TACE</td>
+                                  <td>Thalidomide……</td>
+                                  <td>.……</td>
+                                  <td>.……</td>
+                                  <td class="checkbox"><input checked type="checkbox" name="" /></td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Review</td>
+                                  <td>45</td>
+                                  <td>N Eng J</td>
+                                  <td>2016</td>
+                                  <td>HCC</td>
+                                  <td>1420</td>
+                                  <td>T-TACE</td>
+                                  <td>Thalidomide……</td>
+                                  <td>.……</td>
+                                  <td>.……</td>
+                                  <td class="checkbox"><input checked type="checkbox" name="" /></td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Review</td>
+                                  <td>45</td>
+                                  <td>N Eng J</td>
+                                  <td>2016</td>
+                                  <td>HCC</td>
+                                  <td>1420</td>
+                                  <td>T-TACE</td>
+                                  <td>Thalidomide……</td>
+                                  <td>.……</td>
+                                  <td>.……</td>
+                                  <td class="checkbox"><input checked type="checkbox" name="" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chart-table-opts">
+                        <table>
+                          <tr>
+                            <th class="opt">Share</th>
+                          </tr>
+                          <tr>
+                            <td class="opt"><a href="" class="down">PDF</a></td>
+                          </tr>
+                          <tr>
+                            <td class="opt"><a href="" class="down">PPT</a></td>
+                          </tr>
+                          <tr>
+                            <td class="opt"><a href=""><img src="./images/icon-c1.png" alt="" /></a></td>
+                          </tr>
+                          <tr>
+                            <td class="opt"><a href=""><img src="./images/icon-c2.png" alt="" /></a></td>
+                          </tr>
+                          <tr>
+                            <td class="opt"><a href=""><img src="./images/icon-c3.png" alt="" /></a></td>
+                          </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="news-main">
+                        <div class="quanBlock">
+                            <div class="quanBlock-inner">
+                                <div class="quanBlock-title gtitle">实时圈</div>
+                                <div class="newsList isdn">
+                                    <div class="newsList-item">
+                                        <div class="newsList-itemPic">
+                                            <img src="./images/commomList-img.png" alt="" class="blockImg"/>
+                                        </div>
+                                        <div class="newsList-itemInfo">
+                                            <div class="newsList-itemTitle">我心中的博物馆——陕西2018“国际博物馆日”全民有奖征文活动</div>
+                                            <div class="newsList-itemDesc">在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。</div>
+                                            <div class="newsList-itemTag">曹瀚文(Han Wen Tsao) · 2018-03-01</div>
+                                        </div>
+                                    </div>
+                                    <div class="newsList-item">
+                                        <div class="newsList-itemPic">
+                                            <img src="./images/commomList-img.png" alt="" class="blockImg"/>
+                                        </div>
+                                        <div class="newsList-itemInfo">
+                                            <div class="newsList-itemTitle">我心中的博物馆——陕西2018“国际博物馆日”全民有奖征文活动</div>
+                                            <div class="newsList-itemDesc">在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。</div>
+                                            <div class="newsList-itemTag">曹瀚文(Han Wen Tsao) · 2018-03-01</div>
+                                        </div>
+                                    </div>
+                                    <div class="newsList-item">
+                                        <div class="newsList-itemPic">
+                                            <img src="./images/commomList-img.png" alt="" class="blockImg"/>
+                                        </div>
+                                        <div class="newsList-itemInfo">
+                                            <div class="newsList-itemTitle">我心中的博物馆——陕西2018“国际博物馆日”全民有奖征文活动</div>
+                                            <div class="newsList-itemDesc">在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。</div>
+                                            <div class="newsList-itemTag">曹瀚文(Han Wen Tsao) · 2018-03-01</div>
+                                        </div>
+                                    </div>
+                                    <div class="newsList-item">
+                                        <div class="newsList-itemPic">
+                                            <img src="./images/commomList-img.png" alt="" class="blockImg"/>
+                                        </div>
+                                        <div class="newsList-itemInfo">
+                                            <div class="newsList-itemTitle">我心中的博物馆——陕西2018“国际博物馆日”全民有奖征文活动</div>
+                                            <div class="newsList-itemDesc">在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。</div>
+                                            <div class="newsList-itemTag">曹瀚文(Han Wen Tsao) · 2018-03-01</div>
+                                        </div>
+                                    </div>
+                                    <div class="newsList-item">
+                                        <div class="newsList-itemPic">
+                                            <img src="./images/commomList-img.png" alt="" class="blockImg"/>
+                                        </div>
+                                        <div class="newsList-itemInfo">
+                                            <div class="newsList-itemTitle">我心中的博物馆——陕西2018“国际博物馆日”全民有奖征文活动</div>
+                                            <div class="newsList-itemDesc">在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。</div>
+                                            <div class="newsList-itemTag">曹瀚文(Han Wen Tsao) · 2018-03-01</div>
+                                        </div>
+                                    </div>
+                                    <div class="newsList-item">
+                                        <div class="newsList-itemPic">
+                                            <img src="./images/commomList-img.png" alt="" class="blockImg"/>
+                                        </div>
+                                        <div class="newsList-itemInfo">
+                                            <div class="newsList-itemTitle">我心中的博物馆——陕西2018“国际博物馆日”全民有奖征文活动</div>
+                                            <div class="newsList-itemDesc">在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。</div>
+                                            <div class="newsList-itemTag">曹瀚文(Han Wen Tsao) · 2018-03-01</div>
+                                        </div>
+                                    </div>
+                                   <div class="newsList-item">
+                                        <div class="newsList-itemPic">
+                                            <img src="./images/commomList-img.png" alt="" class="blockImg"/>
+                                        </div>
+                                        <div class="newsList-itemInfo">
+                                            <div class="newsList-itemTitle">我心中的博物馆——陕西2018“国际博物馆日”全民有奖征文活动</div>
+                                            <div class="newsList-itemDesc">在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。</div>
+                                            <div class="newsList-itemTag">曹瀚文(Han Wen Tsao) · 2018-03-01</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="newsDetail">
+                                    <div class="newsDetail-mv">
+                                        <img src="./images/detail.jpg" alt="" class="blockImg"/>
+                                        <img src="./images/detail.jpg" alt="" class="blockImg"/>
+                                        <img src="./images/detail.jpg" alt="" class="blockImg"/>
+                                    </div>
+                                    <div class="newsDetail-content">在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。在第42个国际博物馆日到来之际，陕西省文物局主办、陕西省博物馆协会、同方知网（北京）技术有限公司陕西分公司承办、陕西省博物馆教育联盟协办，于2018年2月28日至2018年5月18日举办“我心中的博物馆——陕西2018‘国际博物馆日’全民有奖征文”活动。</div>
+                                    <div class="newsDetail-author">曹瀚文(Han Wen Tsao) · 2018-03-01</div>
+                                    <div class="backBtn">返回</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-side">
+                          <div class="themeBlock">
+                              <div class="themeBlock-inner">
+                                <div class="themeBlock-title gtitle">主题<span class="themeBlock-btn">发布主题</span></div>
+                                <div class="themeBlock-bd">
+                                    <!--主题列表-->
+                                    <div class="themeBlock-list" style="display:none">
+                                       <div class="themeItem">
+                                            <div class="themeItem-pic">
+                                                <img src="./images/zhuti-img.png" alt="" />
+                                            </div>
+                                            <div class="themeItem-info">
+                                                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
+                                                <div class="themeItem-time">2018-03-08  17:58</div>
+                                                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                <div class="themeItem-tags">
+                                                    <div class="themeItemTag isreply"></div>
+                                                    <div class="themeItemTag iszan">77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="themeItem">
+                                            <div class="themeItem-pic">
+                                                <img src="./images/zhuti-img.png" alt="" />
+                                            </div>
+                                            <div class="themeItem-info">
+                                                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
+                                                <div class="themeItem-time">2018-03-08  17:58</div>
+                                                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                <div class="themeItem-tags">
+                                                    <div class="themeItemTag isreply"></div>
+                                                    <div class="themeItemTag iszan">77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="themeItem">
+                                            <div class="themeItem-pic">
+                                                <img src="./images/zhuti-img.png" alt="" />
+                                            </div>
+                                            <div class="themeItem-info">
+                                                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
+                                                <div class="themeItem-time">2018-03-08  17:58</div>
+                                                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                <div class="themeItem-tags">
+                                                    <div class="themeItemTag isreply"></div>
+                                                    <div class="themeItemTag iszan">77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="themeItem">
+                                            <div class="themeItem-pic">
+                                                <img src="./images/zhuti-img.png" alt="" />
+                                            </div>
+                                            <div class="themeItem-info">
+                                                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
+                                                <div class="themeItem-time">2018-03-08  17:58</div>
+                                                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                <div class="themeItem-tags">
+                                                    <div class="themeItemTag isreply"></div>
+                                                    <div class="themeItemTag iszan">77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="themeItem">
+                                            <div class="themeItem-pic">
+                                                <img src="./images/zhuti-img.png" alt="" />
+                                            </div>
+                                            <div class="themeItem-info">
+                                                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
+                                                <div class="themeItem-time">2018-03-08  17:58</div>
+                                                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                <div class="themeItem-tags">
+                                                    <div class="themeItemTag isreply"></div>
+                                                    <div class="themeItemTag iszan">77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="themeItem">
+                                            <div class="themeItem-pic">
+                                                <img src="./images/zhuti-img.png" alt="" />
+                                            </div>
+                                            <div class="themeItem-info">
+                                                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
+                                                <div class="themeItem-time">2018-03-08  17:58</div>
+                                                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                <div class="themeItem-tags">
+                                                    <div class="themeItemTag isreply"></div>
+                                                    <div class="themeItemTag iszan">77</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--发布主题-->
+                                    <div class="themeWrite" style="display:none">
+                                        <div class="themeWrite-title">
+                                            <input placeholder="输入标题" type="text" name="" class="themeWrite-input"/>
+                                        </div>
+                                        <div class="themeWrite-content">
+                                            <textarea placeholder="输入正文内容" name="" cols="30" rows="10" class="themeWrite-textarea"></textarea>
+                                        </div>
+                                        <div class="writeOther">
+                                            <div class="writeOther-pic">
+                                                <div class="writeOther-picBtn">添加图片</div>
+                                            </div>
+                                            <div class="writeOther-btn">评论</div>
+                                        </div>
+                                    </div>
+                                    <!--主题详情-->
+                                    <div class="themeDetail isexpand">
+                                        <div class="themeDetailItem-wrap">
+                                            <div class="themeDetailItem">
+                                                <div class="themeDetailItem-pic">
+                                                    <img src="./images/zhuti-img.png" alt="" />
+                                                </div>
+                                                <div class="themeDetailItem-info">
+                                                    <div class="themeDetailItem-title">袁凯琦;邓扬;陈道源</div>
+                                                    <div class="themeDetailItem-author">作者 小树树</div>
+                                                    <div class="themeDetailItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                    <div class="themeDetailItem-time">2018-03-08  17:58</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="themeDetail-tags">
+                                            <div class="themeDetail-tag isreply">评论 66666</div>
+                                            <div class="themeDetail-tag iszan">赞 66666</div>
+                                        </div>
+                                        <div class="themeDetail-inner">
+                                            <div class="themeDetail-write">
+                                                <div class="uiComment">
+                                                    <div class="uiComment-writeContent iss1">
+                                                        <textarea name="" cols="30" rows="10" class="uiComment-textarea"></textarea>
+                                                    </div>
+                                                    <div class="uiComment-writeOther writeOther">
+                                                        <div class="writeOther-pic">
+                                                            <div class="writeOther-picBtn">添加图片</div>
+                                                        </div>
+                                                        <div class="writeOther-btn">评论</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="themeDetailComment">
+                                                <div class="themeDetailComment-orders">
+                                                    <div class="themeDetailComment-order ison">按热度</div>
+                                                    <div class="themeDetailComment-order">按时间</div>
+                                                </div>
+                                                <div class="themeDetailComment-list">
+                                                    <div class="themeDetailCommentItem themeItem isnopic">
+                                                        <div class="themeItem-info">
+                                                            <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
+                                                            <div class="themeItem-time">2018-03-08  17:58</div>
+                                                            <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                            <div class="themeItem-uploadPic">
+                                                                <img src="./images/comment-upload.jpg" class="blockImg" alt="" />
+                                                            </div>
+                                                            <div class="themeItem-replys">
+                                                                <div class="themeItemReply">
+                                                                    <span class="themeItemReply-user"><span class="themeItemReply-high">用户00</span>：</span><span class="themeItemReply-content">研究生“医学分子微生物学”优质课程建设与实践</span><span class="themeItemReply-link">回复</span>
+                                                                </div>
+                                                                <div class="themeItemReply">
+                                                                    <span class="themeItemReply-user"><span class="themeItemReply-high">用户11</span>回复<span class="themeItemReply-high">@用户00：</span></span>
+                                                                    <span class="themeItemReply-content">对医学研究生和医院来说,培养优秀医师的有效方法是住院医师规范化培训，它是医学毕业生成长为专科毕业后的医学教育阶段。了解进入住院医师规范化培训的标准化医学毕业生的标准化和培训的认知与研究,为临床医师的培训提供参考对医学研究生和医院来说,培养优秀医师的有效方法是住院医师规范化培训，它是医学毕业生成长为专科毕业后的医学教育阶段。</span><span class="themeItemReply-link">回复</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="themeItem-tags">
+                                                                <div class="themeItemTag isreply"></div>
+                                                                <div class="themeItemTag iszan">77</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="themeDetailCommentItem-reply">
+                                                            <div class="uiComment">
+                                                                <div class="uiComment-writeContent iss2">
+                                                                    <textarea name="" cols="30" rows="10" class="uiComment-textarea"></textarea>
+                                                                </div>
+                                                                <div class="uiComment-writeOther writeOther">
+                                                                    <div class="writeOther-pic">
+                                                                        <div class="writeOther-picBtn">添加图片</div>
+                                                                    </div>
+                                                                    <div class="writeOther-btn">评论</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="themeDetailCommentItem themeItem isnopic">
+                                                        <div class="themeItem-info">
+                                                            <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
+                                                            <div class="themeItem-time">2018-03-08  17:58</div>
+                                                            <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                                                            <div class="themeItem-uploadPic">
+                                                                <img src="./images/comment-upload.jpg" class="blockImg" alt="" />
+                                                            </div>
+                                                            <div class="themeItem-replys">
+                                                                <div class="themeItemReply">
+                                                                    <span class="themeItemReply-user"><span class="themeItemReply-high">用户00</span>：</span><span class="themeItemReply-content">研究生“医学分子微生物学”优质课程建设与实践</span><span class="themeItemReply-link">回复</span>
+                                                                </div>
+                                                                <div class="themeItemReply">
+                                                                    <span class="themeItemReply-user"><span class="themeItemReply-high">用户11</span>回复<span class="themeItemReply-high">@用户00：</span></span>
+                                                                    <span class="themeItemReply-content">对医学研究生和医院来说,培养优秀医师的有效方法是住院医师规范化培训，它是医学毕业生成长为专科毕业后的医学教育阶段。了解进入住院医师规范化培训的标准化医学毕业生的标准化和培训的认知与研究,为临床医师的培训提供参考对医学研究生和医院来说,培养优秀医师的有效方法是住院医师规范化培训，它是医学毕业生成长为专科毕业后的医学教育阶段。</span><span class="themeItemReply-link">回复</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="themeItem-tags">
+                                                                <div class="themeItemTag isreply"></div>
+                                                                <div class="themeItemTag iszan ishaszan">77</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="themeDetailCommentItem-reply">
+                                                            <div class="uiComment">
+                                                                <div class="uiComment-writeContent iss2">
+                                                                    <textarea name="" cols="30" rows="10" class="uiComment-textarea"></textarea>
+                                                                </div>
+                                                                <div class="uiComment-writeOther writeOther">
+                                                                    <div class="writeOther-pic">
+                                                                        <div class="writeOther-picBtn">添加图片</div>
+                                                                    </div>
+                                                                    <div class="writeOther-btn">评论</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="themeDetail-backBtn"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank100"></div>
+        </div>
+        <div class="footer">
+            <div class="inner">
+                <div class="c1">常州制药厂有限公司</div>
+                <div class="c2">Copyright © 2005-2016 WWW.CHANGYIZU.CN All Rights Reserved 沪ICP备16035755号 </div>
+                <div class="c3"><a class="on">关于我们</a>  -  <a>官方新闻</a>  -  <a>业务合作</a>  -  <a>联系我们</a></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="./js/angular-1.2.32.js"></script>
+    <script type="text/javascript" src="./js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/controller.js"></script>
+    <script type="text/javascript" src="./js/directive.js"></script>
+    <script type="text/javascript" src="./js/factory.js"></script>
+    <script type="text/javascript" src="./js/filter.js"></script>
+    <script type="text/javascript" src="./js/page.js"></script>
+</body>
+</html>
