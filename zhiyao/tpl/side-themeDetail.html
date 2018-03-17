@@ -1,33 +1,33 @@
     <!--主题详情-->
-    <div class="themeDetail isexpand">
+    <div class="themeDetail isexpand isdn" ng-class="{'isdn' : !global.isFinished}">
         <div class="themeDetailItem-wrap">
             <div class="themeDetailItem">
                 <div class="themeDetailItem-pic">
                     <img src="./images/zhuti-img.png" alt="" />
                 </div>
                 <div class="themeDetailItem-info">
-                    <div class="themeDetailItem-title">袁凯琦;邓扬;陈道源</div>
-                    <div class="themeDetailItem-author">作者 小树树</div>
-                    <div class="themeDetailItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
-                    <div class="themeDetailItem-time">2018-03-08  17:58</div>
+                    <div class="themeDetailItem-title">{{data.title}}</div>
+                    <div class="themeDetailItem-author">作者 {{data.author}}</div>
+                    <div class="themeDetailItem-content">{{data.descp}}</div>
+                    <div class="themeDetailItem-time">{{data.time}}</div>
                 </div>
             </div>
         </div>
         <div class="themeDetail-tags">
-            <div class="themeDetail-tag isreply">评论 66666</div>
-            <div class="themeDetail-tag iszan">赞 66666</div>
+            <div class="themeDetail-tag isreply" ng-click="fn_showTopicComment()">评论 {{data.comments}}</div>
+            <div class="themeDetail-tag iszan">赞 {{data.hits}}</div>
         </div>
         <div class="themeDetail-inner">
-            <div class="themeDetail-write">
+            <div class="themeDetail-write" ng-if="topic.isTopicComment">
                 <div class="uiComment">
                     <div class="uiComment-writeContent iss1">
-                        <textarea name="" cols="30" rows="10" class="uiComment-textarea"></textarea>
+                        <textarea ng-model="topic.content" cols="30" rows="10" class="uiComment-textarea"></textarea>
                     </div>
                     <div class="uiComment-writeOther writeOther">
                         <div class="writeOther-pic">
                             <div class="writeOther-picBtn">添加图片</div>
                         </div>
-                        <div class="writeOther-btn">评论</div>
+                        <div class="writeOther-btn" ng-click="fn_addTopicComment()">评论</div>
                     </div>
                 </div>
             </div>
@@ -37,78 +37,40 @@
                     <div class="themeDetailComment-order">按时间</div>
                 </div>
                 <div class="themeDetailComment-list">
-                    <div class="themeDetailCommentItem themeItem isnopic">
+                    <div class="themeDetailCommentItem themeItem isnopic" ng-repeat="x in comment.list">
                         <div class="themeItem-info">
-                            <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
-                            <div class="themeItem-time">2018-03-08  17:58</div>
-                            <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
-                            <div class="themeItem-uploadPic">
-                                <img src="./images/comment-upload.jpg" class="blockImg" alt="" />
-                            </div>
+                            <div class="themeItem-title">{{x.name}}</div>
+                            <div class="themeItem-time">{{x.time}}</div>
+                            <div class="themeItem-content">{{x.content}}</div>
                             <div class="themeItem-replys">
-                                <div class="themeItemReply">
-                                    <span class="themeItemReply-user"><span class="themeItemReply-high">用户00</span>：</span><span class="themeItemReply-content">研究生“医学分子微生物学”优质课程建设与实践</span><span class="themeItemReply-link">回复</span>
-                                </div>
-                                <div class="themeItemReply">
-                                    <span class="themeItemReply-user"><span class="themeItemReply-high">用户11</span>回复<span class="themeItemReply-high">@用户00：</span></span>
-                                    <span class="themeItemReply-content">对医学研究生和医院来说,培养优秀医师的有效方法是住院医师规范化培训，它是医学毕业生成长为专科毕业后的医学教育阶段。了解进入住院医师规范化培训的标准化医学毕业生的标准化和培训的认知与研究,为临床医师的培训提供参考对医学研究生和医院来说,培养优秀医师的有效方法是住院医师规范化培训，它是医学毕业生成长为专科毕业后的医学教育阶段。</span><span class="themeItemReply-link">回复</span>
+                                <div class="themeItemReply" ng-repeat="y in x.list">
+                                    <div ng-if="y.nameb.length == 0">
+                                        <span class="themeItemReply-user"><span class="themeItemReply-high">{{y.namea}}</span>：</span><span class="themeItemReply-content">{{y.content}}</span><span class="themeItemReply-link" ng-click="fn_setIds(x,y)">回复</span>
+                                    </div>
+                                    <div ng-if="y.nameb.length > 0">
+                                        <span class="themeItemReply-user"><span class="themeItemReply-high">{{y.namea}}</span>回复<span class="themeItemReply-high">@{{y.nameb}}：</span></span>
+                                        <span class="themeItemReply-content">{{y.content}}</span><span class="themeItemReply-link" ng-click="fn_setIds(x,y)">回复</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="themeItem-tags">
-                                <div class="themeItemTag isreply"></div>
-                                <div class="themeItemTag iszan">77</div>
+                                <div class="themeItemTag isreply" ng-click="fn_setIds(x)"></div>
+                                <div class="themeItemTag iszan" ng-click="fn_zan(x)">{{x.praise}}</div>
                             </div>
                         </div>
-                        <div class="themeDetailCommentItem-reply">
+                        <div class="themeDetailCommentItem-reply" ng-if="x.openComment">
                             <div class="uiComment">
                                 <div class="uiComment-writeContent iss2">
-                                    <textarea name="" cols="30" rows="10" class="uiComment-textarea"></textarea>
+                                    <textarea ng-model="x.reply" cols="30" rows="10" class="uiComment-textarea"></textarea>
                                 </div>
                                 <div class="uiComment-writeOther writeOther">
                                     <div class="writeOther-pic">
                                         <div class="writeOther-picBtn">添加图片</div>
                                     </div>
-                                    <div class="writeOther-btn">评论</div>
+                                    <div class="writeOther-btn" ng-click="fn_addComment(x)">评论</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="themeDetailCommentItem themeItem isnopic">
-                        <div class="themeItem-info">
-                            <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
-                            <div class="themeItem-time">2018-03-08  17:58</div>
-                            <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
-                            <div class="themeItem-uploadPic">
-                                <img src="./images/comment-upload.jpg" class="blockImg" alt="" />
-                            </div>
-                            <div class="themeItem-replys">
-                                <div class="themeItemReply">
-                                    <span class="themeItemReply-user"><span class="themeItemReply-high">用户00</span>：</span><span class="themeItemReply-content">研究生“医学分子微生物学”优质课程建设与实践</span><span class="themeItemReply-link">回复</span>
-                                </div>
-                                <div class="themeItemReply">
-                                    <span class="themeItemReply-user"><span class="themeItemReply-high">用户11</span>回复<span class="themeItemReply-high">@用户00：</span></span>
-                                    <span class="themeItemReply-content">对医学研究生和医院来说,培养优秀医师的有效方法是住院医师规范化培训，它是医学毕业生成长为专科毕业后的医学教育阶段。了解进入住院医师规范化培训的标准化医学毕业生的标准化和培训的认知与研究,为临床医师的培训提供参考对医学研究生和医院来说,培养优秀医师的有效方法是住院医师规范化培训，它是医学毕业生成长为专科毕业后的医学教育阶段。</span><span class="themeItemReply-link">回复</span>
-                                </div>
-                            </div>
-                            <div class="themeItem-tags">
-                                <div class="themeItemTag isreply"></div>
-                                <div class="themeItemTag iszan ishaszan">77</div>
-                            </div>
-                        </div>
-                        <div class="themeDetailCommentItem-reply">
-                            <div class="uiComment">
-                                <div class="uiComment-writeContent iss2">
-                                    <textarea name="" cols="30" rows="10" class="uiComment-textarea"></textarea>
-                                </div>
-                                <div class="uiComment-writeOther writeOther">
-                                    <div class="writeOther-pic">
-                                        <div class="writeOther-picBtn">添加图片</div>
-                                    </div>
-                                    <div class="writeOther-btn">评论</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backBtn" ng-click="fn_back()">返回</div>
                     </div>
                 </div>
             </div>

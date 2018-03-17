@@ -1,86 +1,16 @@
     <!--主题列表-->
     <div class="themeBlock-list">
-       <div class="themeItem" ui-sref="quan.detail.themedetail">
+       <div class="themeItem" ui-sref="quan.detail.themedetail" ng-repeat="x in data.list">
             <div class="themeItem-pic">
-                <img src="./images/zhuti-img.png" alt="" />
+                <img ng-src="{{x.image}}" alt="" />
             </div>
             <div class="themeItem-info">
-                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
-                <div class="themeItem-time">2018-03-08  17:58</div>
-                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
+                <div class="themeItem-title">{{x.title}}</div>
+                <div class="themeItem-time">{{x.time}}</div>
+                <div class="themeItem-content">{{x.descp}}</div>
                 <div class="themeItem-tags">
-                    <div class="themeItemTag isreply"></div>
-                    <div class="themeItemTag iszan">77</div>
-                </div>
-            </div>
-        </div>
-        <div class="themeItem">
-            <div class="themeItem-pic">
-                <img src="./images/zhuti-img.png" alt="" />
-            </div>
-            <div class="themeItem-info">
-                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
-                <div class="themeItem-time">2018-03-08  17:58</div>
-                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
-                <div class="themeItem-tags">
-                    <div class="themeItemTag isreply"></div>
-                    <div class="themeItemTag iszan">77</div>
-                </div>
-            </div>
-        </div>
-        <div class="themeItem">
-            <div class="themeItem-pic">
-                <img src="./images/zhuti-img.png" alt="" />
-            </div>
-            <div class="themeItem-info">
-                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
-                <div class="themeItem-time">2018-03-08  17:58</div>
-                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
-                <div class="themeItem-tags">
-                    <div class="themeItemTag isreply"></div>
-                    <div class="themeItemTag iszan">77</div>
-                </div>
-            </div>
-        </div>
-        <div class="themeItem">
-            <div class="themeItem-pic">
-                <img src="./images/zhuti-img.png" alt="" />
-            </div>
-            <div class="themeItem-info">
-                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
-                <div class="themeItem-time">2018-03-08  17:58</div>
-                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
-                <div class="themeItem-tags">
-                    <div class="themeItemTag isreply"></div>
-                    <div class="themeItemTag iszan">77</div>
-                </div>
-            </div>
-        </div>
-        <div class="themeItem">
-            <div class="themeItem-pic">
-                <img src="./images/zhuti-img.png" alt="" />
-            </div>
-            <div class="themeItem-info">
-                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
-                <div class="themeItem-time">2018-03-08  17:58</div>
-                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
-                <div class="themeItem-tags">
-                    <div class="themeItemTag isreply"></div>
-                    <div class="themeItemTag iszan">77</div>
-                </div>
-            </div>
-        </div>
-        <div class="themeItem">
-            <div class="themeItem-pic">
-                <img src="./images/zhuti-img.png" alt="" />
-            </div>
-            <div class="themeItem-info">
-                <div class="themeItem-title">袁凯琦;邓扬;陈道源</div>
-                <div class="themeItem-time">2018-03-08  17:58</div>
-                <div class="themeItem-content">医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展医学知识图谱构建技术与研究进展</div>
-                <div class="themeItem-tags">
-                    <div class="themeItemTag isreply"></div>
-                    <div class="themeItemTag iszan">77</div>
+                    <div class="themeItemTag isreply">{{x.comments}}</div>
+                    <div class="themeItemTag iszan">{{x.hits}}</div>
                 </div>
             </div>
         </div>

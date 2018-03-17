@@ -1,5 +1,5 @@
 angular.module('myApp',['ui.router','controller','directive','factory','filter','ct.ui.router.extras'])
-    .config(function($httpProvider,$stateProvider,$urlRouterProvider) {
+    .config(function($httpProvider,$stateProvider,$urlRouterProvider,$sceDelegateProvider) {
         // Use x-www-form-urlencoded Content-Type
         $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
@@ -43,6 +43,11 @@ angular.module('myApp',['ui.router','controller','directive','factory','filter',
         $httpProvider.defaults.transformRequest = [function(data) {
             return angular.isObject(data) && String(data) !== '[object File]' ? param(data) : data;
         }];
+        $httpProvider.interceptors.push('myInterceptor');
+
+        $urlRouterProvider.otherwise('/quan');
+
+        $sceDelegateProvider.resourceUrlWhitelist(['*']);
 
         $stateProvider.state('quan',{
             sticky:true,
@@ -55,7 +60,7 @@ angular.module('myApp',['ui.router','controller','directive','factory','filter',
             }
         })
         .state('quan.detail',{
-            url : '/detail',
+            url : '/detail?id',
             views : {
                 'quanDetail@' : {
                     templateUrl : 'tpl/main-quanDetail.html',

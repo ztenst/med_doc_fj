@@ -1,15 +1,15 @@
     <!--发布主题-->
     <div class="themeWrite">
         <div class="themeWrite-title">
-            <input placeholder="输入标题" type="text" name="" class="themeWrite-input"/>
+            <input placeholder="输入标题" type="text" name="" class="themeWrite-input" ng-model="write.title"/>
         </div>
         <div class="themeWrite-content">
-            <textarea placeholder="输入正文内容" name="" cols="30" rows="10" class="themeWrite-textarea"></textarea>
+            <textarea placeholder="输入正文内容" name="" cols="30" rows="10" class="themeWrite-textarea" ng-model="write.content"></textarea>
         </div>
         <div class="writeOther">
             <div class="writeOther-pic">
                 <div class="writeOther-picBtn">添加图片</div>
             </div>
-            <div class="writeOther-btn">评论</div>
+            <div class="writeOther-btn" ng-click="fn_addTopic()">评论</div>
         </div>
     </div>
