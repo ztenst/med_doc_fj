@@ -10,7 +10,13 @@ angular.module('directive',[])
                 //cursorcolor:'#6e8cb6',
                 //cursorborder:'none',
                 //cursorborderradius:4,
-                //autohidemode:'leave'
+                //autohidemode:'leave',
+                //preservenativescrolling : false
+            //})
+            //$(window).resize(function() {
+                //var wh = $(window).height();
+                //element.css('max-height',wh);
+                //element.getNiceScroll().resize();
             //})
         }
     }
