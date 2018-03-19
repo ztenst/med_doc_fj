@@ -58,9 +58,13 @@ angular.module('controller',[])
             return obj.data.data;
         }).then(function(data) {
             $scope.comment = data;
+            resize();
         });
     }
 
+    function resize(){
+        //$(['ui-scroll']).getNiceScroll().resize();
+    }
     //设置id
     $scope.fn_setIds = function(x,y) {
         var second_id = x.id;
@@ -82,6 +86,7 @@ angular.module('controller',[])
             global.comment_id = comment_id;
             global.second_id = second_id;
         }
+        resize();
     }
     //发布评论
     $scope.fn_addComment = function(_x) {
@@ -106,6 +111,7 @@ angular.module('controller',[])
         }else{
             $scope.topic.isTopicComment = true;
         }
+        resize();
     }
     //评论主题
     $scope.fn_addTopicComment = function() {
