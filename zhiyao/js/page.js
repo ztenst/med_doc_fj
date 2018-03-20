@@ -73,7 +73,7 @@ angular.module('myApp',['ui.router','controller','directive','factory','filter',
             }
         })
         .state('quan.detail.themedetail',{
-            url : '/themedetail',
+            url : '/themedetail?cid',
             views : {
                 'themeDetail@' : {
                     templateUrl : 'tpl/side-themeDetail.html',

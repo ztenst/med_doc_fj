@@ -935,6 +935,7 @@ input[type="checkbox"]:checked{
     }
     &-order{
         display:inline-block;
+        cursor:pointer;
         &.ison{
             color:#99d7ff;
         }

@@ -33,8 +33,8 @@
             </div>
             <div class="themeDetailComment">
                 <div class="themeDetailComment-orders">
-                    <div class="themeDetailComment-order ison">按热度</div>
-                    <div class="themeDetailComment-order">按时间</div>
+                    <div class="themeDetailComment-order ison" ng-click="fn_setSort(1)" ng-class="{'ison' : global.sort == 1 }">按热度</div>
+                    <div class="themeDetailComment-order" ng-click="fn_setSort(2)" ng-class="{'ison' : global.sort == 2}">按时间</div>
                 </div>
                 <div class="themeDetailComment-list">
                     <div class="themeDetailCommentItem themeItem isnopic" ng-repeat="x in comment.list">

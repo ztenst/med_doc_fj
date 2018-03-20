@@ -28,12 +28,12 @@ angular.module('controller',[])
     })
 })
 .controller('themeDetail',function($scope,$stateParams,Api) {
-    var id = $stateParams.id;
-    var sort = 1;
+    var id = $stateParams.cid;
     $scope.global = {
         last_comment_id : -1,
         last_second_id : -1,
-        isFinished : false
+        isFinished : false,
+        sort : 1
     }
     $scope.topic = {
         id : id
@@ -53,7 +53,7 @@ angular.module('controller',[])
         //获取评论列表
         Api.getCommentList({
             id : id,
-            sort : sort
+            sort : $scope.global.sort
         }).then(function(obj) {
             return obj.data.data;
         }).then(function(data) {
@@ -62,6 +62,11 @@ angular.module('controller',[])
         });
     }
 
+    //设置热度
+    $scope.fn_setSort = function(sort) {
+        $scope.global.sort = sort;
+        getCommentList();
+    }
     function resize(){
         //$(['ui-scroll']).getNiceScroll().resize();
     }
@@ -134,9 +139,11 @@ angular.module('controller',[])
     }
 
 })
-.controller('themeWrite',function($scope,Api) {
+.controller('themeWrite',function($scope,Api,$stateParams) {
+    var id = $stateParams.id;
     $scope.write = {
-        uid : 2045
+        uid : 2045,
+        mid : id
     };
     $scope.fn_addTopic = function(){
         Api.addTopic($scope.write).then(function(obj) {
