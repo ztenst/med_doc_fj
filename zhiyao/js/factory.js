@@ -59,11 +59,16 @@ angular.module('factory',[])
     }
 })
 .factory('myInterceptor', function($q) {
-    var domain = 'http://doc.madridwine.cn';
+    window.CONFIG = window.CONFIG || {};
+    var domain = CONFIG.host || 'http://doc.madridwine.cn';
+    var staticPath = CONFIG.staticPath || '';
     var interceptor = {
     'request': function(config) {
         if(config.url.slice(1,4) === 'api'){
             config.url = domain + config.url;
+        }
+        if(config.url.slice(0,3) === 'tpl'){
+            config.url = staticPath + config.url;
         }
     // 成功的请求方法
     return config; // 或者 $q.when(config);

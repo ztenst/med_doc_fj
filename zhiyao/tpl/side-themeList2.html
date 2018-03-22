@@ -1,0 +1,17 @@
+    <!--主题列表-->
+    <div class="themeBlock-list">
+        <div class="themeItem" ui-sref="detail.themedetail({cid:x.id})" ng-repeat="x in data.list">
+            <div class="themeItem-pic">
+                <img ng-src="{{x.image}}" alt="" class="themeItem-img"/>
+            </div>
+            <div class="themeItem-info">
+                <div class="themeItem-title">{{x.title}}</div>
+                <div class="themeItem-time">{{x.time}}</div>
+                <div class="themeItem-content">{{x.descp}}</div>
+                <div class="themeItem-tags">
+                    <div class="themeItemTag isreply">{{x.comments}}</div>
+                    <div class="themeItemTag iszan">{{x.hits}}</div>
+                </div>
+            </div>
+        </div>
+    </div>

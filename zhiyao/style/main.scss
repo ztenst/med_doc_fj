@@ -479,6 +479,9 @@ body{
 .blank100{
     height:100px;
 }
+.blank20{
+    height:20px;
+}
 .vn{
     visibility:hidden;
 }
@@ -848,7 +851,7 @@ input[type="checkbox"]:checked{
     }
 }
 .themeDetail{
-    background:#fafafa;
+    background:rgb(245,245,245);
     &.isdn{
         display:none;
     }

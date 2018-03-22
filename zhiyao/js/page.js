@@ -56,15 +56,6 @@ angular.module('myApp',['ui.router','controller','directive','factory','filter',
                 'quanList@' : {
                     templateUrl : 'tpl/main-quanList.html',
                     controller : 'quanList'
-                }
-            }
-        })
-        .state('quan.detail',{
-            url : '/detail?id',
-            views : {
-                'quanDetail@' : {
-                    templateUrl : 'tpl/main-quanDetail.html',
-                    controller : 'quanDetail'
                 },
                 'themeList@' : {
                     templateUrl : 'tpl/side-themeList.html',
@@ -72,7 +63,7 @@ angular.module('myApp',['ui.router','controller','directive','factory','filter',
                 }
             }
         })
-        .state('quan.detail.themedetail',{
+        .state('quan.themedetail',{
             url : '/themedetail?cid',
             views : {
                 'themeDetail@' : {
@@ -81,7 +72,29 @@ angular.module('myApp',['ui.router','controller','directive','factory','filter',
                 }
             }
         })
-        .state('quan.detail.themewrite',{
+        .state('detail',{
+            url : '/detail?id',
+            views : {
+                'quanDetail@' : {
+                    templateUrl : 'tpl/main-quanDetail.html',
+                    controller : 'quanDetail'
+                },
+                'themeList@' : {
+                    templateUrl : 'tpl/side-themeList2.html',
+                    controller : 'themeList'
+                }
+            }
+        })
+        .state('detail.themedetail',{
+            url : '/themedetail?cid',
+            views : {
+                'themeDetail@' : {
+                    templateUrl : 'tpl/side-themeDetail.html',
+                    controller : 'themeDetail'
+                }
+            }
+        })
+        .state('detail.themewrite',{
             url : '/themewrite',
             views : {
                 'themeWrite@' : {
@@ -95,14 +108,17 @@ angular.module('myApp',['ui.router','controller','directive','factory','filter',
         $rootScope.is_view_show = function(view) {
             return $state.current.views && !!$state.current.views[view];
         };
+        $rootScope.is_showQuan = function() {
+            return $state.includes('quan');
+        }
         $rootScope.is_showDetail = function() {
-            return $state.includes('quan.detail');
+            return $state.includes('detail');
         }
         $rootScope.fn_back = function() {
             $window.history.back();
         }
         $rootScope.is_showThemeWrite = function() {
-            return $state.is('quan.detail');
+            return $state.is('detail');
         };
     });
 angular.bootstrap(document,['myApp']);

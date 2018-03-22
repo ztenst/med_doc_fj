@@ -305,7 +305,7 @@
                         <div class="quanBlock">
                             <div class="quanBlock-inner">
                                 <div class="quanBlock-title gtitle">实时圈</div>
-                                <div ui-view="quanList" ng-show="is_view_show('quanList@')"></div>
+                                <div ui-view="quanList" ng-show="is_showQuan()"></div>
                                 <div ui-view="quanDetail" ng-show="is_showDetail()"></div>
                             </div>
                         </div>
@@ -313,7 +313,7 @@
                     <div class="news-side" ui-scroll>
                           <div class="themeBlock">
                               <div class="themeBlock-inner">
-                                <div class="themeBlock-title gtitle">主题<span class="themeBlock-btn" ui-sref="quan.detail.themewrite()" ng-show="is_showThemeWrite()">发布主题</span></div>
+                                <div class="themeBlock-title gtitle">主题<span class="themeBlock-btn" ui-sref="detail.themewrite()" ng-show="is_showThemeWrite()">发布主题</span></div>
                                 <div class="themeBlock-bd">
                                     <div ui-view="themeList" ng-show="is_view_show('themeList@')"></div>
                                     <div ui-view="themeDetail" ng-show="is_view_show('themeDetail@')"></div>
@@ -324,7 +324,7 @@
                     </div>
                 </div>
             </div>
-            <div class="blank100"></div>
+            <div class="blank20"></div>
         </div>
         <div class="footer">
             <div class="inner">
@@ -334,6 +334,12 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var CONFIG = {
+            staticPath : '',
+            host : 'http://doc.madridwine.cn'
+        };
+    </script>
     <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="./js/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="./js/angular-1.2.32.js"></script>

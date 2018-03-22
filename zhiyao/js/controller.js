@@ -18,9 +18,12 @@ angular.module('controller',[])
 })
 .controller('themeList',function($scope,$stateParams,Api) {
     var id = $stateParams.id;
-    Api.getTopicList({
+    var param = id ? {
         vid : id
-    }).then(function(obj) {
+    } : {
+        sort : 1
+    };
+    Api.getTopicList(param).then(function(obj) {
         return obj.data.data;
     }).then(function(data) {
         $scope.data = data;
@@ -139,7 +142,7 @@ angular.module('controller',[])
     }
 
 })
-.controller('themeWrite',function($scope,Api,$stateParams) {
+.controller('themeWrite',function($scope,Api,$stateParams,$state) {
     var id = $stateParams.id;
     $scope.write = {
         uid : 2045,
@@ -147,7 +150,13 @@ angular.module('controller',[])
     };
     $scope.fn_addTopic = function(){
         Api.addTopic($scope.write).then(function(obj) {
-            console.log(obj.data.data);
+            alert(obj.data.msg);
+            $state.go('detail',{
+                id : id
+            },{
+                'location' : 'replace',
+                'reload' : true
+            })
         })
     };
 })
