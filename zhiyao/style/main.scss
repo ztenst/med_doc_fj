@@ -907,17 +907,17 @@ input[type="checkbox"]:checked{
                 top:18px;
             }
         }
-        &.iszan{
+        &.isview{
             &:before{
                 content:'';
-                margin-right:6px;
+                margin-right:2px;
                 display:inline-block;
-                width:15px;
-                height:15px;
-                background:url(../images/icon-zan.png) 0 0 no-repeat;
+                width:26px;
+                height:26px;
+                background:url(../images/view.png) center center  no-repeat;
                 vertical-align:top;
                 position:relative;
-                top:18px;
+                top:12px;
             }
         }
 
