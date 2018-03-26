@@ -42,12 +42,12 @@ jQuery(document).ready(function($) {
         })
      }
      
-     (function(argument) {
-         var ad1 = $('.ad1');
-         if(ad1.length){
-             $('.sidebar-extend').css('top',50+ad1.height()+ 40);
-         }
-     })()
+     //(function(argument) {
+         //var ad1 = $('.ad1');
+         //if(ad1.length){
+             //$('.sidebar-extend').css('top',50+ad1.height()+ 40);
+         //}
+     //})()
      //(function() {
          //var cache_td_ws = [];
          ////thead tbody
