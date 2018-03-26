@@ -506,8 +506,8 @@ body{
                 display:none;
             }
             .sidebar-extend{
+                top:90px;
                 display:block;
-                top:154px;
                 .close{
                     display:none;
                 }
@@ -529,6 +529,19 @@ body{
     }
 }
 
+@media screen and (max-width:1900px){
+    body{
+        .sidebar{
+            position:absolute;
+            .sidebar-extend{
+                top:0!important;
+                .close{
+                    display:none;
+                }
+            }
+        }
+    }
+}
 input[type="checkbox"]{
     -webkit-appearance: none; 
     background:url(../images/checkbox.png) 0 0 no-repeat;
