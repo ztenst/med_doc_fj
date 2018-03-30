@@ -676,14 +676,32 @@ input[type="checkbox"]:checked{
     font-size:14px;
     line-height:24px;
     color:#999;
-    margin-bottom:6px;
+    //margin-bottom:6px;
+    position:relative;
+    &:last-child{
+        &:after{
+            display:none;
+        }
+    }
+    &:after{
+        content:'';
+        height:1px;
+        background:#eee;
+        position:absolute;
+        left:20px;
+        bottom:0;
+        right:20px;
+    }
+    padding:10px 20px;
+    background:#FFF;
     &-high{
         color:#99d7ff;
     }
     &-link{
         color:#333;
-        padding:0 15px;
+        padding-left:15px;
         cursor:pointer;
+        float:right;
     }
 }
 .themeItem{

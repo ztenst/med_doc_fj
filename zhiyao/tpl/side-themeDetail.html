@@ -45,11 +45,15 @@
                             <div class="themeItem-replys">
                                 <div class="themeItemReply" ng-repeat="y in x.list">
                                     <div ng-if="y.nameb.length == 0">
-                                        <span class="themeItemReply-user"><span class="themeItemReply-high">{{y.namea}}</span>：</span><span class="themeItemReply-content">{{y.content}}</span><span class="themeItemReply-link" ng-click="fn_setIds(x,y)">回复</span>
+                                        <span class="themeItemReply-user"><span class="themeItemReply-high">{{y.namea}}</span>：</span><span class="themeItemReply-content">{{y.content}}</span>
                                     </div>
                                     <div ng-if="y.nameb.length > 0">
                                         <span class="themeItemReply-user"><span class="themeItemReply-high">{{y.namea}}</span>回复<span class="themeItemReply-high">@{{y.nameb}}：</span></span>
-                                        <span class="themeItemReply-content">{{y.content}}</span><span class="themeItemReply-link" ng-click="fn_setIds(x,y)">回复</span>
+                                        <span class="themeItemReply-content">{{y.content}}</span>
+                                    </div>
+                                    <div class="themeItemReply-aside">
+                                        <span class="themeItemReply-time">2018-03-08  17:58</span>
+                                        <span class="themeItemReply-link" ng-click="fn_setIds(x,y)">回复</span>
                                     </div>
                                 </div>
                             </div>
