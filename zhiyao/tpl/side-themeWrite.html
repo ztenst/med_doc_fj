@@ -7,7 +7,7 @@
             <textarea placeholder="输入正文内容" name="" cols="30" rows="10" class="themeWrite-textarea" ng-model="write.content"></textarea>
         </div>
         <div class="writeOther-upload" ng-if="write.image">
-            <img ng-src="{{write.image}}?imageView2/1/w/100/h/100" class="writeOther-uploadImg"/>
+            <img ng-src="{{write.image}}?imageView2/1/w/100/h/100" class="writeOther-uploadImg" ui-preview image="write.image"/>
         </div>
         <div class="writeOther">
             <div class="writeOther-pic">

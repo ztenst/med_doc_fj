@@ -10,7 +10,7 @@
                     <div class="themeDetailItem-author">作者 {{data.author}}</div>
                     <div class="themeDetailItem-content">{{data.descp}}</div>
                     <div class="themeDetailItem-image" ng-if="data.image">
-                        <img ng-src="{{data.image}}"/>
+                        <img ng-src="{{data.image}}" ui-preview image="data.image"/>
                     </div>
                     <div class="themeDetailItem-time">{{data.time}}</div>
                 </div>
@@ -27,7 +27,7 @@
                         <textarea ng-model="topic.content" cols="30" rows="10" class="uiComment-textarea"></textarea>
                     </div>
                     <div class="uiComment-writeUpload" ng-if="topic.image">
-                        <img ng-src="{{topic.image}}?imageView2/1/w/100/h/100" class="uiComment-uploadImg"/>
+                        <img ui-preview image="topic.image" ng-src="{{topic.image}}?imageView2/1/w/100/h/100" class="uiComment-uploadImg"/>
                     </div>
                     <div class="uiComment-writeOther writeOther">
                         <div class="writeOther-pic">
@@ -48,6 +48,9 @@
                             <div class="themeItem-title">{{x.name}}</div>
                             <div class="themeItem-time">{{x.time}}</div>
                             <div class="themeItem-content">{{x.content}}</div>
+                            <div class="themeItem-uploadPic" ng-if="x.image">
+                                <img ng-src="{{x.image}}" class="blockImg" alt="" ui-preview image="x.image">
+                            </div>
                             <div class="themeItem-replys">
                                 <div class="themeItemReply" ng-repeat="y in x.list">
                                     <div ng-if="y.nameb.length == 0">
@@ -74,7 +77,7 @@
                                     <textarea ng-model="x.reply" cols="30" rows="10" class="uiComment-textarea"></textarea>
                                 </div>
                                 <div class="uiComment-writeUpload" ng-if="x.image">
-                                    <img ng-src="{{x.image}}?imageView2/1/w/100/h/100" class="uiComment-uploadImg"/>
+                                    <img ng-src="{{x.image}}?imageView2/1/w/100/h/100" class="uiComment-uploadImg" ui-preview image="x.image"/>
                                 </div>
                                 <div class="uiComment-writeOther writeOther">
                                     <div class="writeOther-pic">

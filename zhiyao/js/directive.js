@@ -95,3 +95,23 @@ angular.module('directive',[])
         }
     }
 })
+.directive('uiPreview',function() {
+    return {
+        scope : {
+            image : '='
+        },
+        link : function(scope,element,attr) {
+           element.click(function() {
+               $.fancybox.open([
+                    {
+                        src  : scope.image,
+                        opts : {
+                        }
+                    },
+                ], {
+                    loop : false
+                }); 
+           })
+        }
+    }
+});
