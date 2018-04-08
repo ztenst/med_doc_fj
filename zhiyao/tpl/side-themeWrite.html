@@ -6,10 +6,14 @@
         <div class="themeWrite-content">
             <textarea placeholder="输入正文内容" name="" cols="30" rows="10" class="themeWrite-textarea" ng-model="write.content"></textarea>
         </div>
+        <div class="writeOther-upload" ng-if="write.image">
+            <img ng-src="{{write.image}}?imageView2/1/w/100/h/100" class="writeOther-uploadImg"/>
+        </div>
         <div class="writeOther">
             <div class="writeOther-pic">
-                <div class="writeOther-picBtn">添加图片</div>
+                <div class="writeOther-picBtn" ui-upload image="write.image">添加图片</div>
             </div>
             <div class="writeOther-btn" ng-click="fn_addTopic()">评论</div>
+
         </div>
     </div>

@@ -3,12 +3,15 @@
         <div class="themeDetailItem-wrap">
             <div class="themeDetailItem">
                 <div class="themeDetailItem-pic">
-                    <img ng-src="{{data.image}}" alt="" class="blockImg"/>
+                    <img ng-src="{{data.user_image}}" alt="" class="blockImg"/>
                 </div>
                 <div class="themeDetailItem-info">
                     <div class="themeDetailItem-title">{{data.title}}</div>
                     <div class="themeDetailItem-author">作者 {{data.author}}</div>
                     <div class="themeDetailItem-content">{{data.descp}}</div>
+                    <div class="themeDetailItem-image" ng-if="data.image">
+                        <img ng-src="{{data.image}}"/>
+                    </div>
                     <div class="themeDetailItem-time">{{data.time}}</div>
                 </div>
             </div>
@@ -23,9 +26,12 @@
                     <div class="uiComment-writeContent iss1">
                         <textarea ng-model="topic.content" cols="30" rows="10" class="uiComment-textarea"></textarea>
                     </div>
+                    <div class="uiComment-writeUpload" ng-if="topic.image">
+                        <img ng-src="{{topic.image}}?imageView2/1/w/100/h/100" class="uiComment-uploadImg"/>
+                    </div>
                     <div class="uiComment-writeOther writeOther">
                         <div class="writeOther-pic">
-                            <div class="writeOther-picBtn">添加图片</div>
+                            <div class="writeOther-picBtn" ui-upload image="topic.image">添加图片</div>
                         </div>
                         <div class="writeOther-btn" ng-click="fn_addTopicComment()">评论</div>
                     </div>
@@ -67,9 +73,12 @@
                                 <div class="uiComment-writeContent iss2">
                                     <textarea ng-model="x.reply" cols="30" rows="10" class="uiComment-textarea"></textarea>
                                 </div>
+                                <div class="uiComment-writeUpload" ng-if="x.image">
+                                    <img ng-src="{{x.image}}?imageView2/1/w/100/h/100" class="uiComment-uploadImg"/>
+                                </div>
                                 <div class="uiComment-writeOther writeOther">
                                     <div class="writeOther-pic">
-                                        <div class="writeOther-picBtn">添加图片</div>
+                                        <div class="writeOther-picBtn" ui-upload image="x.image">添加图片</div>
                                     </div>
                                     <div class="writeOther-btn" ng-click="fn_addComment(x)">评论</div>
                                 </div>

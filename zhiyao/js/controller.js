@@ -102,6 +102,7 @@ angular.module('controller',[])
         x.reply = x.reply.replace(x.touser,'');
         Api.addComment({
             content : x.reply,
+            image : x.image,
             major_id : x.id,
             comment_id : x.comment_id,
             uid : 2045,
@@ -126,11 +127,19 @@ angular.module('controller',[])
         var topic = $scope.topic;
         Api.addComment({
             content : topic.content,
+            image : topic.image,
             major_id : topic.id,
         }).then(function(obj) {
-            console.log(obj);
+            resetTopic();
+            getCommentList();
         })
     };
+
+    function resetTopic(){
+        $scope.topic = {
+            id : id
+        };
+    }
     //对评论点赞
     $scope.fn_zan = function(x) {
         Api.addPraise({
